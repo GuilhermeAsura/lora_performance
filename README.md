@@ -1,3 +1,44 @@
+# 📡 **Research Project: Application and Performance of LoRa Technology in Rockets**
+
+## 🛰️ **About the Project**
+This repository contains the codes developed as part of my Scientific Initiation, entitled:
+
+**"Application and Performance of LoRa Technology during rocket flight based on communication integrity"**.
+
+The main objective of this work is to evaluate the efficiency of LoRa communication, focusing on **packet loss** and **transmission rate**, both in **static** experiments (with both radios stationary) and in **dynamic** experiments (with a radio in motion, simulating the flight of a rocket).
+
+## ⚡ **Project Objectives**
+- 📶 **Analyze the transmission rate and packet loss** in LoRa communication.
+- 🔄 **Implement and test the TCP Communication Protocol** for LoRa P2P.
+- 💾 **Store communication data in the ESP32's internal memory**, minimizing the impact on throughput.
+- 🚀 **Apply the results to rocket telemetry**, targeting competitions such as the **Latin American Space Challenge (LASC)**.
+
+## 🛠️ **Hardware Used**
+- **Microcontroller:** ESP32
+- **LoRa Modules:** Ebyte E220-400T22D
+- **Communication:** UART between ESP32 and LoRa modules
+
+## 📚 **Libraries Used**
+For configuration and sending data through LoRa radios, we use the following libraries:
+- [EByte LoRa E220 Series Library](https://github.com/xreef/EByte_LoRa_E220_Series_Library)
+- [EByte LoRa E22 Series Library](https://github.com/xreef/EByte_LoRa_E22_Series_Library)
+- [LoRa E32 Series Library](https://github.com/xreef/LoRa_E32_Series_Library)
+
+## 📂 **Repository Structure**
+📁 **/codigo_principal** - Basic implementation of LoRa communication for performance analysis.
+
+📁 **/implementacao_tcp** - Attempt to implement the TCP Protocol for LoRa communication.
+
+📁 **/arrazenamento_interno** - Methods for saving data in the ESP32's internal memory.
+
+## 🤝 **Collaboration**
+This project is being developed in collaboration with the **Propulsion and Aerospace Technology Team** of the **Federal University of Uberlândia (UFU)**. Our goal is to better understand the behavior of LoRa communication in rockets for **telemetry** applications and improve the efficiency of data sending during flight.
+
+## 📩 **Contact**
+If you have any questions or suggestions, feel free to open an **issue** or get in touch!
+
+---
+
 # 🛰️ **Projeto de Pesquisa: Aplicação e Desempenho da Tecnologia LoRa em Foguetes**🚀
 
 ## 📡 **Sobre o Projeto**
@@ -34,4 +75,5 @@ Este projeto está sendo desenvolvido em colaboração com a **Equipe de Propuls
 
 ## 📩 **Contato**
 Caso tenha dúvidas ou sugestões, fique à vontade para abrir uma **issue** ou entrar em contato!
+
 
