@@ -43,17 +43,16 @@ void setup() {
 
 void loop() {
   if (e220.available() > 0) {
-    // Recebe o pacote
-    ResponseStructContainer rsc = e220.receiveMessage(sizeof(DataPacket));
-//    ResponseContainer rsc = e220.receiveMessageRSSI(sizeof(DataPacket));
+    // Recebe o pacote com RSSI
+    ResponseStructContainer rsc = e220.receiveMessageRSSI(sizeof(DataPacket)); // Alterado para incluir RSSI
     if (rsc.status.code == 1) { // Sucesso na recepção
       DataPacket packet;
       memcpy(&packet, rsc.data, sizeof(DataPacket));
 
       if (packet.type == 0x01) { // Verifica se é um pacote de dados
         String mensagem = String(packet.data);
-        int rssi = e220.getRSSI(); // Obtém RSSI para análise
-//        int rssi = rsc.rssi;
+        int rssi = rsc.rssi; // Obtém RSSI do ResponseStructContainer
+
         // Salva o pacote recebido no SPIFFS
         File file = SPIFFS.open("/received_packets.txt", "a");
         if (file) {
