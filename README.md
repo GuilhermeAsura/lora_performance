@@ -37,8 +37,10 @@ This project is being developed in collaboration with the **Propulsion and Aeros
 ## 📩 **Contact**
 If you have any questions or suggestions, feel free to open an **issue** or get in touch!
 
+
 ---
 
+PT-BR:
 # 🛰️ **Projeto de Pesquisa: Aplicação e Desempenho da Tecnologia LoRa em Foguetes**🚀
 
 ## 📡 **Sobre o Projeto**
