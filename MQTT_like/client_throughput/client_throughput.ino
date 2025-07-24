@@ -12,6 +12,8 @@ LoRa_E22 e22(&Serial2, 15, 21, 19); // AUX, M0, M1
 // Endereçamento 
 #define MY_ADDRESS 0x0001
 #define BROKER_ADDRESS 0x0002
+#define DEST_ADDH 0x00
+#define DEST_ADDL 0x02
 #define LORA_CHANNEL 0x12
 
 // Tipos de Pacote 
@@ -184,5 +186,5 @@ void send_end_session() {
   Serial.println("Enviando sinal de fim de sessão...");
   ControlPacket end_packet;
   end_packet.control_type = END_SESSION;
-  e22.sendFixedMessage(BROKER_ADDRESS, LORA_CHANNEL, &end_packet, sizeof(end_packet));
+  e22.sendFixedMessage(DEST_ADDH, DEST_ADDL, LORA_CHANNEL, &end_packet, sizeof(end_packet));
 }
