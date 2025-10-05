@@ -16,7 +16,7 @@ LoRa_E22 e22(&Serial2, 15, 21, 19); // AUX, M0, M1
 enum PacketType : uint8_t {
   DATA    = 0x03,
   CONTROL = 0x05
-};
+}; 
 
 // Control Types
 enum ControlType : uint8_t {
